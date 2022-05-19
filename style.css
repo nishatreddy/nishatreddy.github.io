@@ -1,0 +1,984 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.navbar-links li {
+  list-style: none;
+}
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+.navbar-links li:hover {
+  background-color: #555;
+}
+
+.toggle-button .bar {
+  background-color: white;
+  height: 3px;
+  width: 100%;
+  border-radius: 10px;
+}
+.toggle-button {
+  width: 30px;
+  height: 21px;
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links li {
+    text-align: center;
+  }
+  .navbar-links li a {
+    padding: 0.5rem 1 rem;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+  main h1 {
+    font-size: 1.5rem;
+  }
+
+  main .description {
+    padding: 1.5rem;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.mainpic {
+  width: 100vw;
+  height: 45vw;
+  background-repeat: no-repeat;
+}
+
+#homepgpic {
+  background-image: url(imgs/1d_four.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#louispgpic {
+  background-image: url(imgs/louis_main.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#zaynpgpic {
+  background-image: url(imgs/zaynpink.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#liampgpic {
+  background-image: url(imgs/liamblue.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#niallpgpic {
+  background-image: url(imgs/niall_main.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#harrypgpic {
+  background-image: url(imgs/harry_under_stage.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  background-color: black;
+  font-size: 3.5rem;
+  color: white;
+  text-align: center;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+h2 {
+  font-size: 3em;
+  font-style: italic;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.description {
+  background-color: white;
+  padding: 4rem;
+}
+
+/* Animated Slideshow Codepen */
+section.codepen {
+  width: 100%;
+  overflow: hidden;
+}
+
+.codepen button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.codepen img {
+  display: block;
+  width: 100%;
+}
+
+.codepen article {
+  display: flex;
+  width: 200%;
+  animation: bannermove 20s linear infinite;
+}
+
+.codepen article.paused {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.codepen div {
+  width: 100%;
+}
+
+.codepen ul {
+  display: flex;
+  background: red;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.codepen li {
+  width: 100%;
+  background: blue;
+}
+
+.codepen li:nth-child(2) {
+  background: green;
+}
+
+.codepen li:nth-child(3) {
+  background: yellow;
+}
+
+@keyframes bannermove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.coltracks {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+/* Formatting for songs */
+.songs ol {
+  font-size: 1.4em;
+  font-style: italic;
+  font-weight: 600;
+  border: 2px solid grey;
+  columns: 200px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0.25em;
+}
+
+.songs li {
+  padding: 0 0.5em;
+  line-height: 1.7;
+  list-style-position: inside;
+}
+
+@media screen and (min-height: 900px) {
+  .description p {
+    font-size: 2em;
+  }
+}
+
+.uan {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.uan:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: url("imgs/uan.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.songs li a {
+  text-decoration: none;
+  color: black;
+}
+
+.uan .songs li a:hover {
+  background-color: #c7e4dc;
+  color: white;
+}
+
+.tmh .songs li a:hover {
+  background-color: #e4a1a2;
+  color: white;
+}
+
+.mm .songs li a:hover {
+  background-color: #ab9b97;
+  color: white;
+}
+
+.four .songs li a:hover {
+  background-color: #82a2b6;
+  color: white;
+}
+
+.mitam .songs li a:hover {
+  background-color: #53231f;
+  color: white;
+}
+
+.tmh {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.tmh:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: url("imgs/tmh4.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.mm {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.mm:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: url("imgs/mm3.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.four {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.four:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-image: url("imgs/four2.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.mitam {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.mitam:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.45;
+  background-image: url("imgs/mitam3.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Music Videos CSS codepen below */
+.mvs {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.mvs:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-color: white;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Tour Info CSS Below */
+.tourinfo ul {
+  font-size: 1em;
+  /* font-style: italic; */
+  font-weight: 600;
+  border: 2px solid grey;
+  columns: auto;
+  /* max-width: auto; */
+  margin: 0 auto;
+  padding: 0.25em;
+  list-style-type: none;
+  display: block;
+  column-width: 150px;
+  gap: 90px;
+  column-rule: solid;
+}
+
+.tourinfo li {
+  padding: 0 0.5em;
+  line-height: 1.7;
+  list-style-position: inside;
+  font-family: "Source Code Pro", monospace;
+}
+
+.uant {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.uant:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: url("imgs/uant4.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tmht {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.tmht:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-image: url("imgs/tmht.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wwat {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.wwat:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-image: url("imgs/wwatmine.JPG");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.otrat {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.otrat:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: url("imgs/otra3.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.merch {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.merch:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  background-position: center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.hscroll {
+  overflow: auto;
+  overflow-x: auto;
+  overflow-y: auto;
+  white-space: nowrap;
+}
+
+/* Louis Tomlinson Content Below */
+.walls {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.walls:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-image: url("imgs/wallscover.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.louis_singles {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.louis_singles:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: url("imgs/louisbrown.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.louis_singles .songs li a:hover {
+  background-color: #b6b1ad;
+  color: white;
+}
+
+.walls .songs li a:hover {
+  background-color: #481f1c;
+  color: white;
+}
+
+.ltwt {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.ltwt:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: url("imgs/ltwtnyc2.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Zayn Malik Content Below */
+.mom {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.mom:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: url("imgs/zaynlaugh.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.mom .songs li a:hover {
+  background-color: grey;
+  color: white;
+}
+
+.icarusfalls {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.icarusfalls:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: url("imgs/icarusfalls.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.icarusfalls .songs li a:hover {
+  background-color: #729cee;
+  color: white;
+}
+
+.nil {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.nil:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: url("imgs/nil.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.nil .songs li a:hover {
+  background-color: #d62f1c;
+  color: white;
+}
+
+.zayn_singles {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.zayn_singles:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: url("imgs/zaynguitar.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.zayn_singles .songs li a:hover {
+  background-color: #a5b3b6;
+  color: white;
+}
+
+/* Liam Payne Content Below */
+.lp1 {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.lp1:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-image: url("imgs/lp1.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.lp1 .songs li a:hover {
+  background-color: #c3d1cf;
+  color: white;
+}
+
+.liam_singles {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.liam_singles:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-image: url("imgs/liam_red_suit.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.liam_singles .songs li a:hover {
+  background-color: #dfa59b;
+  color: white;
+}
+
+/* Niall Horan Content Begins Here */
+.flicker {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.flicker:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-image: url("imgs/flicker_grey.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.flicker .songs li a:hover {
+  background-color: #dbb6ac;
+  color: white;
+}
+
+.hbw {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.hbw:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-image: url("imgs/hbw.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.hbw .songs li a:hover {
+  background-color: #8ccdce;
+  color: white;
+}
+
+.niall_singles {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.niall_singles:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-image: url("imgs/heart_niall.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.niall_singles .songs li a:hover {
+  background-color: #533ba4;
+  color: white;
+}
+
+.flicker_tour {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.flicker_tour:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-image: url("imgs/niall_studio.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Harry Styles Content Below */
+.harry_styles {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.harry_styles:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-image: url("imgs/hs1.JPG");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.harry_styles .songs li a:hover {
+  background-color: #d6afa0;
+  color: white;
+}
+
+.fine_line {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.fine_line:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-image: url("imgs/fine_line.JPG");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.fine_line .songs li a:hover {
+  background-color: #93c2d5;
+  color: white;
+}
+
+.harrys_house {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.harrys_house:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-image: url("imgs/harrys_house.JPG");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.harrys_house .songs li a:hover {
+  background-color: #e1c82b;
+  color: white;
+}
+
+.hs_live {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.hs_live:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-image: url("imgs/harry_fans.JPG");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hs_love_1 {
+  position: relative;
+  padding: 3em 2em;
+}
+
+.hs_love_1:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-image: url("imgs/harry_forum.JPG");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
